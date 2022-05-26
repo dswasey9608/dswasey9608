@@ -38,6 +38,7 @@ In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who tea
 - Software-based Synthetic Aperture Radar (SAR) algorithms for generating radar-based images (Matlab)
 - UART communication on FPGA (Verilog)
 - Basic CPU scheduling algorithms, page replacement, multi-threaded task completion (Java)
+- and many more...
 <!--
 **dswasey9608/dswasey9608** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
