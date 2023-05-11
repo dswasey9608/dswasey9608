@@ -22,10 +22,12 @@ learning how to code better ever since.
 Below, I would like to showcase a few things I have done over the years.
 
 ## Other Notable Projects
-There's a lot of stuff I have done over the years with code, and I would like to make mention of a 
-few of them here.
+There's a lot of stuff I have done over the years with my skills in electrical engineering and coding.
+Use the links below to check them out!
 
-### Indoor Geolocation via Machine Learning with Rincon Research Inc.
+### [School and Personal Projects](pages/code_projects.md)
+
+### [Indoor Geolocation via Machine Learning with Rincon Research Inc.](pages/rincon_research.md)
 For an internship in the summer of 2022 at Rincon Research, I had the opportunity to learn how to 
 develop a real-time system with the GNU Radio ecosystem. I worked alongside five other interns that had 
 experience in signal processing, machine-learning, web-development, and Linux administration. In 
@@ -37,7 +39,7 @@ transmitter. These prediction outputs were then stored in JSON files and sent to
 that would display the data. The goal for the system was to operate at around 5 Hz in real-time and 
 I was able to achieve that design goal.
 
-### GNU Radio Multi-Antenna Real-Time Intrusion Detection System
+### [GNU Radio Multi-Antenna Real-Time Intrusion Detection System](pages/idl.md)
 In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
 signal processing classes. At the time, I was tasked with the goal of what amounted to an indoor 
 "burglar alarm" that ran off of radio signals and software-defined radios (SDRs). After a grueling
@@ -49,25 +51,6 @@ It's funny how much work went into this block. It can now be dragged from a menu
 but it took 5 months to make.
 
 ![rid_block](images/RID_block.png)
-
-### STM32L476VGTx Audio Recorder and Playback System
-This was a very challenging project to put together. It was created as a final project for a 
-Microcontrollers class at USU. This little system used an on-board microphone in combination with a 
-small piezo-electric speaker to record and play back audio. It was definitely low quality, but the 
-point it that it worked. It took long hours of pouring over the massive datasheet for the STM32L476 
-finding all the correct bits to set, figuring out how to make an intuitive menu with a limited 
-7-segment LCD screen. It had features like playing in reverse, changing the speed and volume of 
-playback, and of course, recording. It was a pretty fun little project!
-
-### Some Smaller Class Projects or Personal Projects
-- Sudoku puzzle generator and solver (C++)
-- Binary search trees, balancing binary trees (C++, Java)
-- Completely software-based QPSK transmitter and receiver. Included my own code for PLL, TED, 
-cubic interpolation using a Farrow filter, and complex signal symbol decision. (Python)
-- Software-based Synthetic Aperture Radar (SAR) algorithms for generating radar-based images (Matlab)
-- UART communication on FPGA (Verilog)
-- Basic CPU scheduling algorithms, page replacement, multi-threaded task completion (Java)
-- Simple VGA display via FPGA (VHDL)
 <!--
 **dswasey9608/dswasey9608** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

@@ -1,5 +1,13 @@
 **Table of Contents**
-- [Proudest Achievement: My Own "2D Printer"](#proudest-achievement-my-own-2d-printer)
+- [Summary](#summary)
+- ["2D Printer"](#2d-printer)
+  - [Video Link](#video-link)
+- [Minimum Distance Optimal Control of Robotic Manipulator](#minimum-distance-optimal-control-of-robotic-manipulator)
+- [Simplified Tetris](#simplified-tetris)
+  - [Video Link](#video-link-1)
+- [Conway's Game of Life](#conways-game-of-life)
+  - [Video Link](#video-link-2)
+- [STM32L476VGTx Audio Recorder and Playback System](#stm32l476vgtx-audio-recorder-and-playback-system)
 
 # Summary
 This page showcases some of the things I have done for school and for personal projects. I have
@@ -41,6 +49,8 @@ the drawing surface.
 
 The machine was able to produce some simple but quite amazing drawings!
 
+## [Video Link](https://youtu.be/AMiA-ovaab8)
+
 # Minimum Distance Optimal Control of Robotic Manipulator
 <!-- Highlight efforts made and what I learned -->
 This project was the last project I worked on as part of earning my Master's degree. The design goal
@@ -63,6 +73,14 @@ The report I wrote regarding the results of the project can be found
 GitLab repository is inaccessible because the project was part of a larger hierarchy for which
 I do not have the ability to change access permissions.
 
+|                                                                           Image Descriptions                                                                         |                                    Image                                   |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------:|
+| This image shows how I plotted the trajectories of each joint, which helps to make sense of all the visual information in the images below                           | ![trajectory_example](../images/optimal_control/trajectory_plot_rx200.png) |
+| This animation highlights the use of the kinematics I developed for the Trossen Robotics RX200 manipulator with a simple state-feedback controller                   | ![kinematic_gif](../images/optimal_control/kinem_loop.gif)                 |
+| This is the result of a simultaneous optimization in MATLAB using a code framework from an assignment in class. Didn't turn out too well.                            | ![matlab_optimization](../images/optimal_control/simultaneous_opt.png)     |
+| This is the `OCS2` implementation and result, which actually generated a somewhat useful trajectory, but the optimization never got the arm all the way to the goal. | ![ocs2_optimization](../images/optimal_control/ocs2_optim.png)             |
+
+
 # Simplified Tetris
 <!-- Include information about interfacing with the accelerometer -->
 This project was part of my *Reconfigurable Computing* class at USU. The final project for the class
@@ -70,7 +88,7 @@ was to use an Intel DE10-Lite FPGA development board to create a simplified Tetr
 score, visuals, and some method of control. Because I was in the graduate version of the class, my
 lab partner and I were required to interface with and use an accelerometer to control the location
 of the falling block in the game. All code was written in `VHDL`. You can watch a video of the results
-[here](https://youtu.be/R3DakccRPjQ).
+by clicking on "Video Link" below.
 
 I spent a ridiculous amount of time working on the accelerometer control while my lab partner did most
 everything else. I would have liked to work on more, but I just kept on running into issues with 
@@ -88,7 +106,33 @@ deadzone.
 
 The onboard accelerometer was an ADXL345 accelerometer, with the data rate set to 100 Hz.
 
+## [Video Link](https://youtu.be/R3DakccRPjQ)
+
 # Conway's Game of Life
 <!-- Must include Sonic the Hedgehog recording somewhere in here -->
+This was a really fun assignment I finished while taking a C++ class for my CS minor. Though the 
+concept of Conway's Game of Life is rather simple, in the process of making the base requirements
+for the assignment, I decided to go all out. 
 
-# 
+The most obvious visual addition to the program in comparison to the original assignment 
+requirements was the screen-wrapping. I just thought it would be fun to add, so I did. The second
+feature addition was the timing. I updated the program to include a parameter for beats-per-minute (BPM)
+in order to be able to update at a specific rate with respect to a selected song, since often the 
+tempo of the song is presented in BPM. I ended up spending about 6 additional hours working on these
+two features and for quite a fun result. I am a big fan of Sonic the Hedgehog and Saturday morning
+cartoons, so what better song to sync up the action to than "Gotta Go Fast"? Check out what I did
+by clicking the video link below!
+
+## [Video Link](https://youtu.be/AwmLSysGSoA)
+
+# STM32L476VGTx Audio Recorder and Playback System
+This was a very challenging project to put together in terms of learning new skills to tackle the 
+actual problem. It was created as a final project for a Microcontrollers class at USU. This little 
+system used an on-board microphone in combination with a small piezo-electric speaker to record and 
+play back audio. It was definitely low quality, but the point is that it worked. It took long hours 
+of pouring over the massive datasheet for the STM32L476 finding all the correct bits to set, 
+figuring out how to make an intuitive menu with a limited 7-segment LCD screen. It had features 
+like playing in reverse, changing the speed and volume of playback, and of course, recording. It was
+a pretty fun little project!
+
+<!-- Include a video link to this project -->
