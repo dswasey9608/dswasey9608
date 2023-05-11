@@ -124,6 +124,13 @@ cartoons, so what better song to sync up the action to than "Gotta Go Fast"? Che
 by clicking the video link below!
 
 ## [Video Link](https://youtu.be/AwmLSysGSoA)
+|   |   |
+|:-:|:-:| 
+| ![sonic_x](../images/Sonic_X_English_Logo.png)  |  ![conway](../images/Gospers_glider_gun.gif)  |
+
+Sonic X image by https://sonic.fandom.com/wiki/, Fair use, https://en.wikipedia.org/w/index.php?curid=62470745
+Conway's Game of Life example by Lucas Vieira - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=101736
+
 
 # STM32L476VGTx Audio Recorder and Playback System
 This was a very challenging project to put together in terms of learning new skills to tackle the 
