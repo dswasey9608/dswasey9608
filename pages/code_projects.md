@@ -8,7 +8,7 @@ new experience brought its challenges, but I always had fun in the end.
 
 # "2D Printer"
 <!-- insert image of 2D printer results -->
-![completed_images](images/completed_images.jpg)
+![completed_images](../images/completed_images.jpg)
 
 "Plotter" is definitely the common name for this, but I wasn't aware of it until I did some more 
 research. For the Mechatronics class at USU, the main objective of the class was to design and build 
@@ -21,7 +21,7 @@ To summarize:
 plotted using some assets I found online.
 
 <!-- Show the LotR image -->
-![lotr_images](images/lotr_progress.jpg)
+![lotr_images](../images/lotr_progress.jpg)
 
 This project required the development of analog circuitry to control servos that moves the drawing 
 utensil around the plotting space, power considerations, 3D printing, image processing, simple path 
@@ -65,6 +65,28 @@ I do not have the ability to change access permissions.
 
 # Simplified Tetris
 <!-- Include information about interfacing with the accelerometer -->
+This project was part of my *Reconfigurable Computing* class at USU. The final project for the class
+was to use an Intel DE10-Lite FPGA development board to create a simplified Tetris game, with sound,
+score, visuals, and some method of control. Because I was in the graduate version of the class, my
+lab partner and I were required to interface with and use an accelerometer to control the location
+of the falling block in the game. All code was written in `VHDL`. You can watch a video of the results
+[here](https://youtu.be/R3DakccRPjQ).
+
+I spent a ridiculous amount of time working on the accelerometer control while my lab partner did most
+everything else. I would have liked to work on more, but I just kept on running into issues with 
+the accelerometer. Communication with the onboard accelerometer was achieved using the SPI protocol.
+A driver for the low-level SPI communication was created, which passed information to a SPI "controller".
+The SPI controller operated on 16-bit input and output data segments while the driver worked with
+the individual bits. Only the x-axis data was necessary for the game controller to be implemented,
+so that simplified the work a little bit.
+
+The final product of the work on the accelerometer was a game controller that had a center deadzone
+to reduce "noise" on the motion from the user. The tilting motion in the left or right direction
+would move the block in that respective direction, and the block would persist in a given column
+of the game map when the user returned the board to the neutral position within the established
+deadzone.
+
+The onboard accelerometer was an ADXL345 accelerometer, with the data rate set to 100 Hz.
 
 # Conway's Game of Life
 <!-- Must include Sonic the Hedgehog recording somewhere in here -->
