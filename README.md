@@ -89,7 +89,7 @@ but it took 5 months to make.
 This was a very challenging project to put together. It was created as a final project for a 
 Microcontrollers class at USU. This little system used an on-board microphone in combination with a 
 small piezo-electric speaker to record and play back audio. It was definitely low quality, but the 
-point it that it worked. It took long hours of pouring over the massive datasheet for the STM32L476 
+point is that it worked. It took long hours of pouring over the massive datasheet for the STM32L476 
 finding all the correct bits to set, figuring out how to make an intuitive menu with a limited 
 7-segment LCD screen. It had features like playing in reverse, changing the speed and volume of 
 playback, and of course, recording. It was a pretty fun little project!
