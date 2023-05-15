@@ -1,6 +1,10 @@
 **Table of Contents**
 - [Summary](#summary)
 - ["2D Printer"](#2d-printer)
+  - [Circuitry](#circuitry)
+  - [3D Printed Parts](#3d-printed-parts)
+  - [Image Processing](#image-processing)
+  - [Path Generation](#path-generation)
   - [Video Link](#video-link)
 - [Minimum Distance Optimal Control of Robotic Manipulator](#minimum-distance-optimal-control-of-robotic-manipulator)
 - [Simplified Tetris](#simplified-tetris)
@@ -16,7 +20,7 @@ new experience brought its challenges, but I always had fun in the end.
 
 # "2D Printer"
 <!-- insert image of 2D printer results -->
-![completed_images](../images/completed_images.jpg)
+![completed_images](../images/mech/completed_images.jpg)
 
 "Plotter" is definitely the common name for this, but I wasn't aware of it until I did some more 
 research. For the Mechatronics class at USU, the main objective of the class was to design and build 
@@ -29,14 +33,11 @@ To summarize:
 plotted using some assets I found online.
 
 <!-- Show the LotR image -->
-![lotr_images](../images/lotr_progress.jpg)
+![lotr_images](../images/mech/lotr_progress.jpg)
 
 This project required the development of analog circuitry to control servos that moves the drawing 
 utensil around the plotting space, power considerations, 3D printing, image processing, simple path 
 planning, and plenty of programming.
-
-The project utilized Teknic ClearPath Servos to operate. These were controlled by a BeagleBoneBlack 
-microcontroller.
 
 The flow of the system was intended as follows:
 1. Do edge detection on an image to extract the edges to draw.
@@ -44,10 +45,60 @@ The flow of the system was intended as follows:
 3. Convert pixel map data to servo commands
 4. Iterate through the commands to draw an image.
 
-One additional feature was path scaling, used to convert an image of a given size to be bigger on 
-the drawing surface.
+The machine was able to produce some simple but quite amazing drawings, even considering how much
+work still could have been done to improve its operation.
 
-The machine was able to produce some simple but quite amazing drawings!
+## Circuitry
+The circuits developed were rather simple. The Teknic ClearPath servos needed a direction and a step input from a
+3.3V logic-level driver. I wired up a low-side NPN transistor configuration for each input, one set
+for the x-axis, and one set for the y-axis. The actuation for the drawing utensil was operated in a 
+similar way, using a flyback diode to prevent back-EMF into the power supply. The motors were driven
+using a BeagleBoneBlack (BBB) microcontroller, which also hosted the code for image processing and generating
+path commands.
+
+![electronics](../images/mech/plotter_electronics.jpg)
+
+## 3D Printed Parts
+The 3D printing was done by my team members. Mounts for the servos were created using CAD models of
+the servos from Teknic. Brackets and other mounts for stabilization of the two lead screws were also
+printed, as well as a pulley for the belt used for transferring rotational motion from one x-axis
+screw to another. Many of the mechanical concerns that were addressed came in trying to make sure
+everything on the machine would be aligned and not tear itself apart.
+
+![mechanical](../images/mech/plotter_setup.jpg)
+
+## Image Processing
+Originally the idea was to be able to read in an image like a PNG or JPEG and do Sobel edge detection
+on it, but I quickly realized that I didn't quite have the resources to read in a full image in those
+file formats. I instead utilized a MATLAB script I had written for a Discrete-time Systems and Signals
+class that converted those types of images into bitmaps, which were much easier to read in code.
+I wrote code for Sobel edge detection that was verified to work, but unfortunately Sobel edge-detection
+didn't really get the fine-grained lines that I was looking for, even though I put a threshold on
+them to really make sure I only got the most distinct lines.
+
+Unfortunately due to time-constraints at the end of the semester for this project, I had to pre-make
+images to run path generation on, but for proof-of-concept purposes, the whole process of the project
+still "worked".
+
+## Path Generation
+The path planning for this device was really the first I had ever tried to do, and I didn't have
+any prior knowledge for how to generate paths for a plotter beforehand. What I came up with essentially
+amounted to what one could imagine as a Roomba-style cursor on an image. It would start at the
+top-leftmost active pixel from a processed image, then look at the first active pixel neighbor
+in the bitmap in a clockwise direction from the current direction it was facing. Once an active pixel
+was travelled to, it would be marked as inactive (0 for inactive, 1 for active on a black and white
+bitmap). 
+
+The differences in location from pixel to pixel would be recorded with the appropriate step and 
+direction commands into a path. This would continue until there were no longer active neighbors of
+the "scanner" as I called it, then each path was stored in a vector. The vector of paths, or servo
+commands, would then be read and the signals transmitted via the GPIO pins on the BBB.
+
+The biggest issue in this part of the process (already acknowledging that the path generation is not
+the most amazing algorithm) was the lack of ability to control servos simultaneously and the inability
+to directly access the GPIO pin values from the BBB. I was only able to manage control using system
+commands, which were exceedingly slow and disappointing when trying to actually draw something.
+
 
 ## [Video Link](https://youtu.be/AMiA-ovaab8)
 
