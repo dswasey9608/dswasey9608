@@ -19,46 +19,12 @@ of a FIRST Robotics programming team and what I learned from playing with LEGO M
 showed me the potential of what can be done with code and hardware combined. I have been coding and 
 learning how to code better ever since.
 
-Below, I would like to showcase a few things I have done over the years.
+I would like to showcase a few things I have done over the years. There's a lot of stuff I 
+have done with my skills in electrical engineering and coding. Use the links below to check them out!
+Other sections about jobs, internships, and another hobby of mine are on their way soon, so the 
+other two sections and other additional sections will be linked accordingly when they are ready.
 
-## "2D Printer"
-<!-- insert image of 2D printer results -->
-![completed_images](images/completed_images.jpg)
-
-"Plotter" is definitely the common name for this, but I wasn't aware of it until I did some more 
-research. For the Mechatronics class at USU, the main objective of the class was to design and build 
-a project of your own choosing. My team included myself and two mechanical engineers. 
-
-To summarize:
-- Utilized a BeagleBone Black Microcontroller
-- Made edge detection, path tracing, and path following code from scratch.
-- It worked. It also happened to make some really cool images. Below is one that I came up with and 
-plotted using some assets I found online.
-
-<!-- Show the LotR image -->
-![lotr_images](images/lotr_progress.jpg)
-
-This project required the development of analog circuitry to control servos that moves the drawing 
-utensil around the plotting space, power considerations, 3D printing, image processing, simple path 
-planning, and plenty of programming.
-
-The project utilized Teknic ClearPath Servos to operate. These were controlled by a BeagleBoneBlack 
-microcontroller.
-
-The flow of the system was intended as follows:
-1. Do edge detection on an image to extract the edges to draw.
-2. Store the edge detection and generate paths for the plotter to follow as it drew the image
-3. Convert pixel map data to servo commands
-4. Iterate through the commands to draw an image.
-
-One additional feature was path scaling, used to convert an image of a given size to be bigger on 
-the drawing surface.
-
-The machine was able to produce some simple but quite amazing drawings!
-
-## Other Notable Projects
-There's a lot of stuff I have done over the years with code, and I would like to make mention of a 
-few of them here.
+### [School and Personal Projects](pages/code_projects.md)
 
 ### Indoor Geolocation via Machine Learning with Rincon Research Inc.
 For an internship in the summer of 2022 at Rincon Research, I had the opportunity to learn how to 
@@ -83,26 +49,7 @@ in a positive way. Check out my video from GRCon [here](https://www.youtube.com/
 It's funny how much work went into this block. It can now be dragged from a menu in two seconds, 
 but it took 5 months to make.
 
-![rid_block](images/RID_block.png)
-
-### STM32L476VGTx Audio Recorder and Playback System
-This was a very challenging project to put together. It was created as a final project for a 
-Microcontrollers class at USU. This little system used an on-board microphone in combination with a 
-small piezo-electric speaker to record and play back audio. It was definitely low quality, but the 
-point is that it worked. It took long hours of pouring over the massive datasheet for the STM32L476 
-finding all the correct bits to set, figuring out how to make an intuitive menu with a limited 
-7-segment LCD screen. It had features like playing in reverse, changing the speed and volume of 
-playback, and of course, recording. It was a pretty fun little project!
-
-### Some Smaller Class Projects or Personal Projects
-- Sudoku puzzle generator and solver (C++)
-- Binary search trees, balancing binary trees (C++, Java)
-- Completely software-based QPSK transmitter and receiver. Included my own code for PLL, TED, 
-cubic interpolation using a Farrow filter, and complex signal symbol decision. (Python)
-- Software-based Synthetic Aperture Radar (SAR) algorithms for generating radar-based images (Matlab)
-- UART communication on FPGA (Verilog)
-- Basic CPU scheduling algorithms, page replacement, multi-threaded task completion (Java)
-- Simple VGA display via FPGA (VHDL)
+![rid_block](images/idl/RID_block.png)
 <!--
 **dswasey9608/dswasey9608** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
