@@ -12,6 +12,7 @@
 - [Conway's Game of Life](#conways-game-of-life)
   - [Video Link](#video-link-2)
 - [STM32L476VGTx Audio Recorder and Playback System](#stm32l476vgtx-audio-recorder-and-playback-system)
+  - [Video Link](#video-link-3)
 
 # Summary
 This page showcases some of the things I have done for school and for personal projects. I have
@@ -20,7 +21,7 @@ new experience brought its challenges, but I always had fun in the end.
 
 # "2D Printer"
 <!-- insert image of 2D printer results -->
-![completed_images](../images/mech/completed_images.jpg)
+![completed_images](../images/code_projects/mech/completed_images.jpg)
 
 "Plotter" is definitely the common name for this, but I wasn't aware of it until I did some more 
 research. For the Mechatronics class at USU, the main objective of the class was to design and build 
@@ -33,7 +34,7 @@ To summarize:
 plotted using some assets I found online.
 
 <!-- Show the LotR image -->
-![lotr_images](../images/mech/lotr_progress.jpg)
+![lotr_images](../images/code_projects/mech/lotr_progress.jpg)
 
 This project required the development of analog circuitry to control servos that moves the drawing 
 utensil around the plotting space, power considerations, 3D printing, image processing, simple path 
@@ -56,7 +57,7 @@ similar way, using a flyback diode to prevent back-EMF into the power supply. Th
 using a BeagleBoneBlack (BBB) microcontroller, which also hosted the code for image processing and generating
 path commands.
 
-![electronics](../images/mech/plotter_electronics.jpg)
+![electronics](../images/code_projects/mech/plotter_electronics.jpg)
 
 ## 3D Printed Parts
 The 3D printing was done by my team members. Mounts for the servos were created using CAD models of
@@ -65,7 +66,7 @@ printed, as well as a pulley for the belt used for transferring rotational motio
 screw to another. Many of the mechanical concerns that were addressed came in trying to make sure
 everything on the machine would be aligned and not tear itself apart.
 
-![mechanical](../images/mech/plotter_setup.jpg)
+![mechanical](../images/code_projects/mech/plotter_setup.jpg)
 
 ## Image Processing
 Originally the idea was to be able to read in an image like a PNG or JPEG and do Sobel edge detection
@@ -100,7 +101,11 @@ to directly access the GPIO pin values from the BBB. I was only able to manage c
 commands, which were exceedingly slow and disappointing when trying to actually draw something.
 
 
-## [Video Link](https://youtu.be/AMiA-ovaab8)
+## Video Link
+A demonstration of the plotter can be viewed [here](https://youtu.be/AMiA-ovaab8). The first little
+bit of the video is just a slideshow of some of the results. The video of the system working start
+at the 30-second mark. You may notice that video portion is actually sped up. It gives you a sense
+of how absurdly slow the commands were being updated on the BBB.
 
 # Minimum Distance Optimal Control of Robotic Manipulator
 <!-- Highlight efforts made and what I learned -->
@@ -157,7 +162,8 @@ deadzone.
 
 The onboard accelerometer was an ADXL345 accelerometer, with the data rate set to 100 Hz.
 
-## [Video Link](https://youtu.be/R3DakccRPjQ)
+## Video Link
+A quick demo video can be seen [here](https://youtu.be/R3DakccRPjQ).
 
 # Conway's Game of Life
 <!-- Must include Sonic the Hedgehog recording somewhere in here -->
@@ -171,13 +177,13 @@ feature addition was the timing. I updated the program to include a parameter fo
 in order to be able to update at a specific rate with respect to a selected song, since often the 
 tempo of the song is presented in BPM. I ended up spending about 6 additional hours working on these
 two features and for quite a fun result. I am a big fan of Sonic the Hedgehog and Saturday morning
-cartoons, so what better song to sync up the action to than "Gotta Go Fast"? Check out what I did
-by clicking the video link below!
+cartoons, so what better song to sync up the action to than "Gotta Go Fast"? 
 
-## [Video Link](https://youtu.be/AwmLSysGSoA)
+## Video Link
+Check out what I did by following this [link](https://youtu.be/AwmLSysGSoA)!
 |   |   |
 |:-:|:-:| 
-| ![sonic_x](../images/Sonic_X_English_Logo.png)  |  ![conway](../images/Gospers_glider_gun.gif)  |
+| ![sonic_x](../images/code_projects/Sonic_X_English_Logo.png)  |  ![conway](../images/code_projects/Gospers_glider_gun.gif)  |
 
 - Sonic X image by https://sonic.fandom.com/wiki/, Fair use, https://en.wikipedia.org/w/index.php?curid=62470745
 - Conway's Game of Life example by Lucas Vieira - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=101736
@@ -191,6 +197,9 @@ play back audio. It was definitely low quality, but the point is that it worked.
 of pouring over the massive datasheet for the STM32L476 finding all the correct bits to set, 
 figuring out how to make an intuitive menu with a limited 7-segment LCD screen. It had features 
 like playing in reverse, changing the speed and volume of playback, and of course, recording. It was
-a pretty fun little project!
+a pretty fun little project! All of the code was written in C.
+
+## Video Link
+A simple example of this working can be found [here](https://youtu.be/cHCXgGVlyZ8).
 
 <!-- Include a video link to this project -->
