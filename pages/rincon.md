@@ -32,7 +32,7 @@ The key things I learned as part of this internship include:
 - GNU Radio capabilities (to add to what I began to learn at the [IDL](./idl.md))
 - Needs for team goal setting and planning
 - Digital spread-spectrum (DSS) communication
-- 
+- Basic code profiling for system speed improvement
 
 Below I will go over a few of the things that I worked on in this system.
 
@@ -63,5 +63,48 @@ frequencies. What this accomplishes is pretty awesome.
 Usually in digital communications, engineers need to be concerned about the noise floor, or the 
 power level of the random radio signals floating around in the air. If a particular signal is below 
 the power level of the noise floor, it can be really difficult to pick up on the receiver side of 
-the signal. However, with a spread-spectrum signal, as long as the receiver know
+the signal. However, with a spread-spectrum signal, as long as the receiver has the same PN
+sequence to correlate incoming signals with, the transmitted data can be recovered.
+
+I worked with a few of the other interns to set up a system in GNU Radio such that we could generate,
+modulate, transmit, then receive, demodulate, and do correlations on the incoming signals on the 
+receiver end. We used a simple BPSK (Binary Phase Shift Keying) modulation scheme.
+
+## Real-time Operations
+The goal for the system's real-time operation was to run at a rate of 5 Hz. In order to do this,
+we had to consider the length of the PN sequence, the correlation's computation time, and data 
+conversion for outputting to the rest of the system. We decided to use publisher/subscriber network
+communication protocol in order to send received data through to the neural network to make an 
+estimate of where the transmitter was at any given time.
+
+The library we used to do this is called `ZMQ`. It provided a simple interface for us to connect to
+different devices over a local WiFi network which we used to synchronize the whole system. We needed
+training data to be collected so the neural network could be developed initially, meaning that when we
+actually used the real-time component of the system, the data also needed to be time-synchronized. This
+also required that we retain as much data as possible. This necessitated the use of TCP in our system,
+so as to make sure that the correct sets of correlations were compared to each other. TCP uses 
+two-way communication to verify that the subscriber has actually received the data before dropping
+a given piece of data from the publisher's message buffers.
+
+After sending correlation data using tools in the `ZMQ` library, we needed to do data synchronization.
+Because of limitations on data types that we could send through the GNU Radio data pipeline, the timestamp
+obtained for any given piece of correlation data needed to be split up and converted into multiple
+limited bit-resolution numbers. This information was then send in the same vector of data that the 
+correlations were stored in. The vectors of data were sent from the laptops connected to the receivers
+to a desktop that did data synchronization.
+
+The data synchronization algorithm looked something like this:
+
+![data_sync](../images/rincon/data_sync_flow.svg)
+
+If one of the radios was sending data with timestamps too far ahead of the others,
+receiving data from the radio that was ahead would be halted, while waiting for the other radio to
+catch up. Once the timestamps for both of the radios are within a specified tolerance, the data was
+formatted to be compatible with the neural network (labeled NN in the image). To make sure the neural
+network could keep up, I implemented a server/client protocol. Whenever the neural network was ready
+to process new data, it would make a request to the data synchronization node. This method of data 
+transmission allowed the neural network to have the most recent data at any given time. 
+
+The last part of the real-time system that I implemented was a simple script to convert output data
+from the neural network into `JSON` files.
 
