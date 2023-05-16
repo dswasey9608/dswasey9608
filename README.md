@@ -1,4 +1,9 @@
 ### Daren Swasey's Coding Portfolio
+| <img src="images/code_projects/mech/plotter_electronics.jpg" width="600"> | <img src="images/code_projects/mech/plotter_setup.jpg" width="600"> |
+|:-:|:-:|
+| <img src="images/robotics_lab/scenario.png" width="600"> | <img src="images/optimal_control/ocs2_optim.png" width="600"> |
+
+ 
 
 Howdy! I am Daren Swasey. I graduated in May 2023 with a Master's Degree in Electrical Engineering 
 with an emphasis in Controls and Signal Processing from Utah State University. In 2021 at the 
@@ -26,6 +31,17 @@ other two sections and other additional sections will be linked accordingly when
 
 ### [School and Personal Projects](pages/code_projects.md)
 
+### [GNU Radio Multi-Antenna Real-Time Intrusion Detection System](pages/idl.md)
+In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
+signal processing classes. At the time, I was tasked with the goal of what amounted to an indoor 
+"burglar alarm" that ran off of radio signals and software-defined radios (SDRs). After a grueling
+process of study, research, testing, failing, testing, progress, and more testing, I was able to 
+come up with several algorithms for intrusion detection. These algorithms ran in the GNU Radio 
+environment in sort of a pseudo-real-time fashion, and the results were actually quite surprising
+in a positive way. Check out my video from GRCon [here](https://www.youtube.com/watch?v=JcKWgyM55To&t=1s). 
+It's funny how much work went into this block. It can now be dragged from a menu in two seconds, 
+but it took 5 months to make.
+
 ### Indoor Geolocation via Machine Learning with Rincon Research Inc.
 For an internship in the summer of 2022 at Rincon Research, I had the opportunity to learn how to 
 develop a real-time system with the GNU Radio ecosystem. I worked alongside five other interns that had 
@@ -38,18 +54,6 @@ transmitter. These prediction outputs were then stored in JSON files and sent to
 that would display the data. The goal for the system was to operate at around 5 Hz in real-time and 
 I was able to achieve that design goal.
 
-### GNU Radio Multi-Antenna Real-Time Intrusion Detection System
-In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
-signal processing classes. At the time, I was tasked with the goal of what amounted to an indoor 
-"burglar alarm" that ran off of radio signals and software-defined radios (SDRs). After a grueling
-process of study, research, testing, failing, testing, progress, and more testing, I was able to 
-come up with several algorithms for intrusion detection. These algorithms ran in the GNU Radio 
-environment in sort of a pseudo-real-time fashion, and the results were actually quite surprising
-in a positive way. Check out my video from GRCon [here](https://www.youtube.com/watch?v=JcKWgyM55To&t=1s). 
-It's funny how much work went into this block. It can now be dragged from a menu in two seconds, 
-but it took 5 months to make.
-
-![rid_block](images/idl/RID_block.png)
 <!--
 **dswasey9608/dswasey9608** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -63,13 +67,4 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
-
-Outline:
-
-- Short intro to myself
-- Backstory of how I came to be an EE and software developer
-- List of skills and favorite things to do in code
-- List of my favorite projects
-  - Show images of the absolute best
-  - Keep images of others in a folder on GitHub
 -->
