@@ -23,11 +23,11 @@ showed me the potential of what can be done with code and hardware combined. I h
 learning how to code better ever since.
 
 I would like to showcase a few things I have done over the years. There's a lot of stuff I 
-have done with my skills in electrical engineering and coding. Use the links below to check them out!
-Other sections about jobs, internships, and another hobby of mine are on their way soon, so the 
-other two sections and other additional sections will be linked accordingly when they are ready.
+have done with my skills in electrical engineering and coding. Use the header links below to check 
+them out!
 
 ### [School and Personal Projects](pages/code_projects.md)
+A small collection of things I have done in school and/or personally.
 
 ### [GNU Radio Multi-Antenna Real-Time Intrusion Detection System](pages/idl.md)
 In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
@@ -38,7 +38,7 @@ come up with several algorithms for intrusion detection. These algorithms ran in
 environment in sort of a pseudo-real-time fashion, and the results were actually quite surprising
 in a positive way.
 
-### Indoor Geolocation via Machine Learning with Rincon Research Inc.
+### [Indoor Geolocation via Machine Learning with Rincon Research Inc.](pages/rincon.md)
 For an internship in the summer of 2022 at Rincon Research, I had the opportunity to learn how to 
 develop a real-time system with the GNU Radio ecosystem. I worked alongside five other interns that had 
 experience in signal processing, machine-learning, web-development, and Linux administration. In 
