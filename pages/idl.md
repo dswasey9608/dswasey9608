@@ -7,6 +7,16 @@ amazing audio and image processing techniques. Whether it was learning about con
 transform, signal modulation, or otherwise, it was all really intriguing. I then learned that Dr.
 Moon had an open position on his team for research.
 
+Some of the main experiences I gained here include:
+- Digital communications
+- MATLAB signal processing
+- GNU Radio
+- Using Ettus Research Software Defined Radio tools and hardware
+- Data collection and management (all would have been lost without organizing the many GB of data we collected)
+- Developing C++ and Python code using 3rd-party libraries
+- Technical writing
+- Data analysis
+
 I started this research by becoming familiar with the basics of digital communications. BPSK, QPSK,
 OFDM, and QAM signal types were all utilized during my time there. As I worked up from ground-zero
 in my digital communications knowledge, I was able to start working with Dr. Moon to attempt to 
@@ -23,7 +33,7 @@ seen in my 2021 GRCon presentation, which was hosted in Charlotte, North Carolin
 - [PDF of Technical Report](../docs/multi_antenna_detection.pdf)
 - [Video Demonstration of Detections](https://youtu.be/onrUHqd5cPw)
 
-As a TLDR, below is an image of the final result of that project. By using the gain value that
+TLDR; Below is an image of the final result of that project. By using the gain value that
 appears in an Automatic Gain Control (AGC) defined in software, I was able to identify when a 
 non-transmitter was moving or had changed position. This held true for the nearly the entire floor of the 
 building I was working in, assuming the target was going at a typical walking pace. The heat map
@@ -40,12 +50,3 @@ into developing something that now only takes a couple of seconds to put into a 
 ![rid](../images/idl/RID_block.png)
 
 
-Some of the main experiences I gained here include:
-- Digital communications
-- MATLAB signal processing
-- GNU Radio
-- Using Ettus Research Software Defined Radio tools and hardware
-- Data collection and management (all would have been lost without organizing the many GB of data we collected)
-- Developing C++ and Python code using 3rd-party libraries
-- Technical writing
-- Data analysis

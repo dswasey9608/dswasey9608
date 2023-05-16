@@ -3,8 +3,6 @@
 |:-:|:-:|
 | <img src="images/robotics_lab/scenario.png" width="600"> | <img src="images/optimal_control/ocs2_optim.png" width="600"> |
 
- 
-
 Howdy! I am Daren Swasey. I graduated in May 2023 with a Master's Degree in Electrical Engineering 
 with an emphasis in Controls and Signal Processing from Utah State University. In 2021 at the 
 beginning of my professional program, I held a job as an undergraduate researcher in signal processing 
@@ -17,7 +15,7 @@ utilized C++ and Python.
 
 I have been coding since my middle-school years, dabbling in C# briefly before moving on to C++ in 
 high-school. Since then, I have grown to learn Python, Java, C, MATLAB, Assembly, VHDL, Verilog, 
-and some Bash scripting. I have a few years of experience with Linux and Git VCS as well, rounding 
+and some Bash scripting. I have a few years of experience with Linux and Git as well, rounding 
 off some good software development skills that I have learned over the years in my EE degree and 
 from the classes I took in my Computer Science minor. Way before then, my experiences as a member 
 of a FIRST Robotics programming team and what I learned from playing with LEGO Mindstorms set really 
@@ -33,14 +31,12 @@ other two sections and other additional sections will be linked accordingly when
 
 ### [GNU Radio Multi-Antenna Real-Time Intrusion Detection System](pages/idl.md)
 In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
-signal processing classes. At the time, I was tasked with the goal of what amounted to an indoor 
-"burglar alarm" that ran off of radio signals and software-defined radios (SDRs). After a grueling
+signal processing classes. At the time, I was tasked with developing an indoor 
+"burglar alarm" that utilized radio signals and software-defined radios (SDRs). After a grueling
 process of study, research, testing, failing, testing, progress, and more testing, I was able to 
 come up with several algorithms for intrusion detection. These algorithms ran in the GNU Radio 
 environment in sort of a pseudo-real-time fashion, and the results were actually quite surprising
-in a positive way. Check out my video from GRCon [here](https://www.youtube.com/watch?v=JcKWgyM55To&t=1s). 
-It's funny how much work went into this block. It can now be dragged from a menu in two seconds, 
-but it took 5 months to make.
+in a positive way.
 
 ### Indoor Geolocation via Machine Learning with Rincon Research Inc.
 For an internship in the summer of 2022 at Rincon Research, I had the opportunity to learn how to 
