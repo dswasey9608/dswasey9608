@@ -29,6 +29,13 @@ them out!
 ### [School and Personal Projects](pages/code_projects.md)
 A small collection of things I have done in school and/or personally.
 
+### [USU Robotics Lab](pages/idl.md)
+This is a page regarding my most recent research experience with Dr. Greg Droge at Utah State University
+during the last year of my graduate program. I had a lot of fun learning to use ROS2 and making fun tools
+in ROS as well as in Python, C++ and even `bash` on occasion. I learned a fair bit about making merge
+requests during my time here too. The focus of the research I was supporting was UAV path planning 
+under uncertainty.
+
 ### [GNU Radio Multi-Antenna Real-Time Intrusion Detection System](pages/idl.md)
 In March of 2021, I began work with Dr. Todd K. Moon, a professor at USU who teaches primarily 
 signal processing classes. At the time, I was tasked with developing an indoor 
