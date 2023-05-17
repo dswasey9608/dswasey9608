@@ -15,7 +15,7 @@
   - [Video Link](#video-link-3)
 
 # Summary
-This page showcases some of the things I have done for school and for personal projects. I have
+This page showcases some of the things I have done for school and/or for personal projects. I have
 worked with a large variety of systems, languages, and tools over the course of my education. Each
 new experience brought its challenges, but I always had fun in the end. 
 
@@ -28,7 +28,7 @@ research. For the Mechatronics class at USU, the main objective of the class was
 a project of your own choosing. My team included myself and two mechanical engineers. 
 
 To summarize:
-- Utilized a BeagleBone Black Microcontroller
+- Utilized a BeagleBoneBlack (BBB) Microcontroller
 - Made edge detection, path tracing, and path following code from scratch.
 - It worked. It also happened to make some really cool images. Below is one that I came up with and 
 plotted using some assets I found online.
@@ -81,6 +81,12 @@ Unfortunately due to time-constraints at the end of the semester for this projec
 images to run path generation on, but for proof-of-concept purposes, the whole process of the project
 still "worked".
 
+To get an idea of what Sobel edge detection looks like, here is a edge-detected image from one of my assignments
+in my Discrete-time Systems and Signal class. (I do not own the original image or claim it as my own)
+
+| <img src="../images/code_projects/wild.jpg" width="600"> | <img src="../images/code_projects/wildConvolved.png" width="600"> |
+|:-:|:-:|
+
 ## Path Generation
 The path planning for this device was really the first I had ever tried to do, and I didn't have
 any prior knowledge for how to generate paths for a plotter beforehand. What I came up with essentially
@@ -99,7 +105,6 @@ The biggest issue in this part of the process (already acknowledging that the pa
 the most amazing algorithm) was the lack of ability to control servos simultaneously and the inability
 to directly access the GPIO pin values from the BBB. I was only able to manage control using system
 commands, which were exceedingly slow and disappointing when trying to actually draw something.
-
 
 ## Video Link
 A demonstration of the plotter can be viewed [here](https://youtu.be/AMiA-ovaab8). The first little
@@ -135,7 +140,6 @@ I do not have the ability to change access permissions.
 | This animation highlights the use of the kinematics I developed for the Trossen Robotics RX200 manipulator with a simple state-feedback controller                   | ![kinematic_gif](../images/optimal_control/kinem_loop.gif)                 |
 | This is the result of a simultaneous optimization in MATLAB using a code framework from an assignment in class. Didn't turn out too well.                            | ![matlab_optimization](../images/optimal_control/simultaneous_opt.png)     |
 | This is the `OCS2` implementation and result, which actually generated a somewhat useful trajectory, but the optimization never got the arm all the way to the goal. | ![ocs2_optimization](../images/optimal_control/ocs2_optim.png)             |
-
 
 # Simplified Tetris
 <!-- Include information about interfacing with the accelerometer -->

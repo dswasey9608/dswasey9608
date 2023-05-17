@@ -1,7 +1,7 @@
 # Utah State University Robotics Lab (August 2022 - May 2023)
 In the last year of my graduate program I had the opportunity to work with Dr. Greg Droge in his 
 robotics lab at Utah State. I did a Master's of Engineering program for my grad program, so I took
-more classes instead of focusing on research had I done a thesis. So when I worked for Dr. Droge I 
+more classes instead of focusing on research if had I done a thesis. So when I was working for Dr. Droge I 
 was mainly doing supportive coding work for a PhD student candidate regarding UAV path planning under
 uncertainty. I was able to learn a lot of cool things regarding ROS2 and real-time communication
 systems.
@@ -35,7 +35,7 @@ buoy publisher.
 ## LinCov and PDVG Interfaces
 The biggest nodes I created while working for Dr. Droge were the LinCov and PDVG interfaces. These
 were developed as a wrapper for using code that did linear covariance analysis on the planned UAV paths,
-or for the PDVG (Probability of Detection Visibility Graph) problem. The PDVG problem was a problem
+or the PDVG (Probability of Detection Visibility Graph) problem. The PDVG problem was a problem
 being developed by one of Dr. Droge's PhD student regarding how to guide a UAV through a GPS-denied
 region without being detected by local radars.
 
