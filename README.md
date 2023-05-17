@@ -29,7 +29,7 @@ them out!
 ### [School and Personal Projects](pages/code_projects.md)
 A small collection of things I have done in school and/or personally.
 
-### [USU Robotics Lab](pages/idl.md)
+### [USU Robotics Lab](pages/robotics_lab.md)
 This is a page regarding my most recent research experience with Dr. Greg Droge at Utah State University
 during the last year of my graduate program. I had a lot of fun learning to use ROS2 and making fun tools
 in ROS as well as in Python, C++ and even `bash` on occasion. I learned a fair bit about making merge
