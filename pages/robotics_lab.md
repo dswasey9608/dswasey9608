@@ -36,7 +36,7 @@ buoy publisher.
 The biggest nodes I created while working for Dr. Droge were the LinCov and PDVG interfaces. These
 were developed as a wrapper for using code that did linear covariance analysis on the planned UAV paths,
 or the PDVG (Probability of Detection Visibility Graph) problem. The PDVG problem was a problem
-being developed by one of Dr. Droge's PhD student regarding how to guide a UAV through a GPS-denied
+being developed by one of Dr. Droge's PhD students regarding how to guide a UAV through a GPS-denied
 region without being detected by local radars.
 
 This node required me to connect user interaction from the `rviz` interface with certain features
